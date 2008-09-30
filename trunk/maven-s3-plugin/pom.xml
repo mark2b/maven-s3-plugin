@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>net.mem2b</groupId>
+		<artifactId>parent-pom</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>net.mem2b</groupId>
+	<artifactId>maven-s3-plugin</artifactId>
+	<packaging>maven-plugin</packaging>
+	<version>0.1-SNAPSHOT</version>
+	<name>Maven S3 Plugin</name>
+	<description>Maven 2 plugin for operation with Amazon S3</description>
+	<inceptionYear>2008</inceptionYear>
+
+	<scm>
+		<connection>scm:svn:http://${project.artifactId}.googlecode.com/svn/trunk/${project.artifactId}</connection>
+		<developerConnection>scm:svn:https://${project.artifactId}.googlecode.com/svn/trunk/${project.artifactId}</developerConnection>
+		<url>http://${project.artifactId}.googlecode.com/svn/trunk/${project.artifactId}</url>
+	</scm>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-plugin-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</reporting>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-plugin-api</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>net.java.dev.jets3t</groupId>
+			<artifactId>jets3t</artifactId>
+			<version>0.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.4</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<name>jets3t</name>
+			<id>jets3t</id>
+			<url>http://jets3t.s3.amazonaws.com/maven2</url>
+		</repository>
+	</repositories>
+</project>
